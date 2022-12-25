@@ -4,8 +4,9 @@ pipeline {
         registry = "nueltoznet/nodeapp"
     }
     agent {
-        any
-        reuseNode true
+        any {
+            reuseNode true
+        }
     }
     stages {
         stage("Test") {
