@@ -4,7 +4,8 @@ pipeline {
         registry = "nueltoznet/nodeapp"
     }
     agent {
-        any {
+        docker {
+            args "-u root"
             reuseNode true
         }
     }
