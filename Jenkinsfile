@@ -3,7 +3,10 @@ pipeline {
         // This registry is important for removing the image after the tests
         registry = "nueltoznet/nodeapp"
     }
-    agent any
+    agent {
+        any
+        reuseNode true
+    }
     stages {
         stage("Test") {
             steps {
